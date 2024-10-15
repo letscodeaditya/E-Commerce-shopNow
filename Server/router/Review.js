@@ -1,5 +1,5 @@
 const express=require('express')
-const reviewController=require("../controllers/Review")
+const reviewController=require("../controller/Review")
 const router=express.Router()
 
 

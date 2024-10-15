@@ -1,4 +1,4 @@
-const Category=require("../model/Category")
+const Category=require("../Model/Category")
 
 exports.getAll=async(req,res)=>{
     try {

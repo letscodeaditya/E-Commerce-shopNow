@@ -1,5 +1,5 @@
 const express=require("express")
-const wishlistController=require("../controllers/Wishlist")
+const wishlistController=require("../controller/Wishlist")
 const router=express.Router()
 
 

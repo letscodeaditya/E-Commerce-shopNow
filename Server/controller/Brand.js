@@ -1,4 +1,4 @@
-const Brand=require("../model/Brand")
+const Brand=require("../Model/Brand")
 
 exports.getAll=async(req,res)=>{
     try {

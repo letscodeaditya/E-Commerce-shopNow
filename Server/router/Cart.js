@@ -1,5 +1,5 @@
 const express=require('express')
-const cartController=require('../controllers/Cart')
+const cartController=require('../controller/Cart')
 const router=express.Router()
 
 router

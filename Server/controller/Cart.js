@@ -1,4 +1,4 @@
-const Cart=require('../models/Cart')
+const Cart=require('../Models/Cart')
 
 exports.create=async(req,res)=>{
     try {
