@@ -21,32 +21,26 @@ const Activity = () => {
           <Grid item xs={12} md={6} display="flex" justifyContent="center">
             <Card
               sx={{
-                width: "70%",
-                height:'150px',
+                width: "100%",
+                height:'225px',
                 backgroundImage: "url(./posted.png)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                borderRadius: 4,
+                borderRadius: "20px",
+                border:'4px solid black',
                 textAlign: "center",
                 p: 4,
                 boxShadow: 3,
                 transition: "0.3s",
                 "&:hover": {
-                  boxShadow: 6,
+                  boxShadow: 10,
                 },
               }}
             >
-              <Typography variant="h4" gutterBottom>
-                Show My Listed Products
+              <Typography variant="h5" sx={{mt:18 ,}} gutterBottom>
+                <strong> Show My Products</strong>
               </Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={handleShowListings}
-                sx={{ mt: 2, borderRadius: 20, width: "60%" }}
-              >
-                Click Here
-              </Button>
+
             </Card>
           </Grid>
 
@@ -57,9 +51,11 @@ const Activity = () => {
             <Card
               sx={{
                 display: "flex",
+                
                 mb: 4,
                 cursor: "pointer",
                 borderRadius: 4,
+                border:'4px solid black',
                 transition: "0.3s",
                 "&:hover": {
                   boxShadow: 6,

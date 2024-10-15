@@ -133,6 +133,7 @@ const Home = () => {
                       variant="contained"
                       color="primary"
                       sx={{ mt: 1, borderRadius: 20 }}
+                      onClick={()=>nav(`/productByCategory/${category.name}`)}
                     >
                       Shop Now
                     </Button>

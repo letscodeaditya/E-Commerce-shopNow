@@ -12,6 +12,8 @@ import Protected from './routes/Protected.jsx';
 import ProductForm from './features/users/components/Product.jsx';
 import './index.css'
 import ProductDetail from './components/ProductDetail.jsx';
+import Profile from './features/users/Profile.jsx';
+import CategoryPage from './page/CategoryPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,14 +27,14 @@ const router = createBrowserRouter([
       // { path: "/admin-login", element: <AdminLogin />},
       // { path: "/subscription", element: <PricingPlans/>},
       { path: "/products/details/:id", element: <ProductDetail/>,},
-      // { path: "/:propertyType/rent/:id", element: <Detail/>,},
+      { path: "/productByCategory/:categoryName", element: <CategoryPage/>,},
       // { path: "/:propertyType/:type", element: <PropertyList/>},
       // { path: "/searchresult/:propertyType/:type/:city/:flatSize/:pageno/:size", element: <SearchResult/>},
       {
         path: "/home",
         element: <Protected />,
         children: [
-          // { path: "/home/profile", element: <Profile /> },
+          { path: "/home/profile", element: <Profile /> },
           { path: "/home/activity", element: <Activity /> },
           { path: "/home/activity/postProduct", element: <ProductForm/> },
           // { path: "/home/activity/postedproducts", element: <PostedProduct/> },

@@ -3,7 +3,7 @@ const { upload, uploadImages } = require('../controller/upload');
 
 const router = express.Router();
 
-router.post('/upload', upload.fields([
+router.post('/img', upload.fields([
     { name: 'thumbnail', maxCount: 1 }, 
     { name: 'images', maxCount: 5 }     
 ]), uploadImages);

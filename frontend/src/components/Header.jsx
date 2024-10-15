@@ -46,10 +46,10 @@ const Header = () => {
         {/* Logo and Shop Name */}
         <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={handleClick}>
           <IconButton edge="start" color="inherit" aria-label="store">
-            <StoreIcon sx={{ fontSize: 40, color: 'white' }} />
+            <StoreIcon sx={{ fontSize: 40, color: 'black' }} />
           </IconButton>
-          <Typography variant="h5" component="div" sx={{ ml: 1, color: 'white', fontWeight: 'bold' }}>
-            ShopNow
+          <Typography variant="h5" component="div" sx={{ ml: 1, }}>
+            <strong style={{color:'#1F2544'}}><strong  style={{fontSize:'40px'}}>S</strong>hop</strong><strong style={{color:'#FFD0EC'}}>no<strong style={{fontSize:'40px'}}>W</strong></strong>
           </Typography>
         </Box>
 
@@ -60,7 +60,7 @@ const Header = () => {
               {/* Cart Icon with Badge */}
               <IconButton color="inherit">
                 <Badge badgeContent={2} color="secondary">
-                  <ShoppingCartIcon sx={{ color: 'white' }} />
+                  <ShoppingCartIcon sx={{ color: '#FFD0EC' }} />
                 </Badge>
               </IconButton>
               {/* Profile Menu */}
@@ -71,7 +71,7 @@ const Header = () => {
                   textTransform: 'none',
                   ml: 2,
                   '&:hover': {
-                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                    backgroundColor: '#FFD0EC',
                     borderRadius: 2,
                   },
                 }}

@@ -90,7 +90,7 @@ const ProductForm = () => {
       imageFiles.forEach((file) => formData.append("images", file));
   
       try {
-        const response = await axios.post(`${api}/api/upload`, formData, {
+        const response = await axios.post(`${api}/api/upload/img`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
