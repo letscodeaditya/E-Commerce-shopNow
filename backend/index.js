@@ -17,6 +17,7 @@ const app = express();
 
 const corsOptions = {
     origin: ["http://localhost:5173", "https://e-comm-shop-now.vercel.app"],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   };
 
