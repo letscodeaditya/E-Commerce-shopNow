@@ -26,6 +26,9 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 // API Routes
+app.get('/', (req, res) => {
+    res.send('Welcome to the API!'); 
+});
 app.use('/api', userRouter);
 app.use("/api/products", productRoutes);
 app.use("/api/brands", brandRoutes);
