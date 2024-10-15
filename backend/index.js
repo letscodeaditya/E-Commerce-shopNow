@@ -16,8 +16,13 @@ connectDb();
 
 const app = express();
 
+const corsOptions = {
+    origin: ["http://localhost:5173", "https://e-comm-shop-now.vercel.app"],
+    credentials: true, // Allow credentials (cookies, authorization headers)
+  };
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // API Routes
