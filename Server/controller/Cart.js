@@ -1,4 +1,4 @@
-const Cart=require('../Models/Cart')
+const Cart=require('../Model/Cart')
 
 exports.create=async(req,res)=>{
     try {
@@ -14,9 +14,19 @@ exports.create=async(req,res)=>{
 exports.getByUserId=async(req,res)=>{
     try {
         const {id}=req.params
-        const result = await Cart.find({ user: id }).populate({path:"product",populate:{path:"brand"}});
+        const cartItem = await Cart.find({ user: id }).populate({path:"product",populate:{path:"brand"}});
 
-        res.status(200).json(result)
+        if (cartItem) {
+            return res.status(200).json({
+              exists: true,
+              cartItem,
+            });
+          } else {
+            return res.status(200).json({
+              exists: false,
+              message: 'this user dont have anything in cart',
+            });
+          }
     } catch (error) {
         console.log(error);
         return res.status(500).json({message:'Error fetching cart items, please trying again later'})
@@ -57,3 +67,35 @@ exports.deleteByUserId=async(req,res)=>{
     }
 
 }
+
+exports.getCartItemByUserAndProduct = async (req, res) => {
+    try {
+      const { userId, productId } = req.params;
+  
+      // Find the cart item with both user and product
+      const cartItem = await Cart.findOne({ user: userId, product: productId })
+        .populate({
+          path: "product",
+          populate: { path: "brand" },
+        });
+  
+      if (cartItem) {
+        return res.status(200).json({
+          exists: true,
+          message: 'Product is already in the cart.',
+          cartItem,
+        });
+      } else {
+        return res.status(200).json({
+          exists: false,
+          message: 'Product is not in the cart.',
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({
+        message: 'Error checking if product is in the cart, please try again later.',
+      });
+    }
+  };
+  

@@ -14,6 +14,7 @@ import './index.css'
 import ProductDetail from './components/ProductDetail.jsx';
 import Profile from './features/users/Profile.jsx';
 import CategoryPage from './page/CategoryPage.jsx';
+import CartPage from './page/CartPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
           { path: "/home/profile", element: <Profile /> },
           { path: "/home/activity", element: <Activity /> },
           { path: "/home/activity/postProduct", element: <ProductForm/> },
+          { path: "/home/cart", element: <CartPage/>}
           // { path: "/home/activity/postedproducts", element: <PostedProduct/> },
       //     { path: "/home/activity/bungalowAD", element: <BungalowForm/> },
       //     { path: "/home/subscription-payment", element: <Payment/> },

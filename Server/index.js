@@ -5,6 +5,7 @@ const productRoutes = require("./router/Product")
 const uploadRoutes = require("./router/Upload")
 const brandRoutes = require('./router/Brand')
 const categoryRoutes = require('./router/Category')
+const cartRoutes = require('./router/Cart')
 const dotenv = require('dotenv');
 const cors = require("cors");
 
@@ -30,6 +31,7 @@ app.use('/api/auth', userRouter);
 app.use("/api/products", productRoutes);
 app.use("/api/brands", brandRoutes);
 app.use("/api/categories", categoryRoutes);
+app.use("/api/cart", cartRoutes)
 app.use('/api/upload', uploadRoutes);
 
 

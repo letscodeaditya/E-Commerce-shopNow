@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#282c34", // Dark background
+        backgroundColor: "#282c34", 
         color: "white",
         padding: "40px 0",
         borderTop: "1px solid #e0e0e0",
@@ -41,13 +41,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/shop" style={{ textDecoration: "none", color: "white" }}>
-                  Shop
-                </a>
-              </li>
-              <li>
                 <a href="/contact" style={{ textDecoration: "none", color: "white" }}>
-                  Contact
+                  about us
                 </a>
               </li>
             </ul>
